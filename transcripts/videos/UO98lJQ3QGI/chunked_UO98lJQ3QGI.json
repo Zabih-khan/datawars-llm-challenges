@@ -1,0 +1,302 @@
+[
+    {
+        "chunk_id": "0",
+        "text": "Hey there. How's it going everybody? In this series of videos, we're gonna be learning how to use the matplotlib library in Python. So matplotlib is a plotting library for Python that allows us to create some great looking graphs from our data. So this is used a ton in the data science field and also in applications where we need to visualize our data. So I have the Matplotlib website open here, and we can see on their example page that you can make some really nice visualizations using"
+    },
+    {
+        "chunk_id": "1",
+        "text": "can make some really nice visualizations using Matplotlib. And we'll be learning how to do several of these in this series. So in this video, we're gonna be going over the basics of matplotlib and start out with an easy line plot. We'll also learn how to customize the plot style and labels to the axis, add a title, create a legend, and things like that. Now I'd also like to mention that we do have a sponsor for this series of videos and that is brilliant.org. So I really wanna thank Brilliant"
+    },
+    {
+        "chunk_id": "2",
+        "text": "brilliant.org. So I really wanna thank Brilliant for sponsoring this series, and it would be great if you all could check them out using the link in the description section below and support the sponsors. And I'll talk more about their services in just a bit. So with that said, let's go ahead and get started. Okay. So first, we need to install matplotlib. So we can do this easily using pip. So I'm going to open my terminal here. And we can simply install this with a PIP install. Now I have a"
+    },
+    {
+        "chunk_id": "3",
+        "text": "install this with a PIP install. Now I have a virtual environment activated. You don't need to be using a virtual environment. But in my opinion, it's always a good idea to create a new environment for when you're starting new projects, even if we're just testing stuff out. Now if you don't know how to create virtual environments, then I'll leave a link to my video explaining those in the description section below. Okay. So to install Matplotlib, we can simply say pip install and that is"
+    },
+    {
+        "chunk_id": "4",
+        "text": "we can simply say pip install and that is matplotlib. So let's install that. And once we have this installed, then we're gonna go, learn how to create a simple plot. So I'm using Sublime Text for these videos. So I'm going to open up Sublime here. And I just have a new folder here called matplotlib, and I'm currently within this MPL demo, dotpy file here. Now it's also very popular to use Jupyter Notebooks when working with data because you can run specific cells at a time, and also you can see"
+    },
+    {
+        "chunk_id": "5",
+        "text": "specific cells at a time, and also you can see your visualizations in line. But some people find it difficult to get up and running with Jupyter Notebooks, so I'm just gonna use a regular editor since more people are probably probably familiar with this. But if you're using Jupyter, then you should be able to follow along just fine. Then, if you'd like to learn how to use Jupyter notebooks, then I do have a separate video specifically on that. So I'll be sure to leave a link to that video in"
+    },
+    {
+        "chunk_id": "6",
+        "text": "So I'll be sure to leave a link to that video in the description section below as well, if anyone is interested. Okay. So let's create some simple plots to get us started out. So first, I'm gonna import pyplot from the matplotlib module. So I'm gonna say from matplotlib, and we want to import pyplot. And I'm going to import this as plt. That's a common convention there to just import that as PLT so that we don't have to write out pyplot every time we wanna use that. And now let's create some"
+    },
+    {
+        "chunk_id": "7",
+        "text": "time we wanna use that. And now let's create some sample data that we wanna plot. So in this video, we're gonna add our own data here within Python, and in the next video, we'll see how to read in data from an external source like a CSV file. So I'm gonna use some data that I grabbed from the annual Stack Overflow developer survey. They actually just released the 2019 data publicly the day that I was putting this video together, so it was good timing on that part. So the data that I'm gonna be"
+    },
+    {
+        "chunk_id": "8",
+        "text": "on that part. So the data that I'm gonna be using from that survey is the median salary for a developer based on their age. And this is data that I parsed out of the results myself. So I'll be sure to leave a link to my data files here in the description section below, for those of you who'd like to follow along. Also, I'm gonna make a video in the near future showing how I cleaned and parsed out that data out of their results. But for now, let's just continue on with plotting this. So first,"
+    },
+    {
+        "chunk_id": "9",
+        "text": "just continue on with plotting this. So first, I'm going to create a list and I'm gonna call this dev underscore x, And this will be the values for the x axis on the plot, and these will be age ranges. Now I'm a pretty slow typer sometimes, so I'm gonna use some snippets here. And, again, I'm gonna post the, link to these snippets in the description section below if anyone wants to grab these themselves. So I'm just going to grab these from my snippets here just so I don't have to type all"
+    },
+    {
+        "chunk_id": "10",
+        "text": "my snippets here just so I don't have to type all these out. So I'm gonna grab those and paste those in, and this is just a list here from 25 to 35. Now in the actual survey, they did actually have all of the ages included, but I didn't wanna crowd the screen with data right off the bat. So we're just gonna work with a subset of the ages between 2535 for now. But if you stick around to the end of the video, then we'll plot out the median salaries for all of the ages, that had enough data. Okay."
+    },
+    {
+        "chunk_id": "11",
+        "text": "for all of the ages, that had enough data. Okay. So now I'm gonna create a list, I'm gonna call this dev y. And this will be the values of our y axis on the plot. And these will be the median salaries for the ages that we added into our other list here. So let me also grab these from my snippets file. So I'm gonna grab those and paste those in. Okay. So now that we have a list of values that we want for our x axis here as dev x and a list of values that we want for our y axis here as dev y, so"
+    },
+    {
+        "chunk_id": "12",
+        "text": "that we want for our y axis here as dev y, so now let's plot this. So to plot this data, it's as easy as simply saying plt.plot. And first, we wanna pass in, what would the data for our x axis, which is gonna be devx, and then the data for our y axis, which is devy. Now if you've ever looked at the Matplotlib documentation or looked at other examples of people creating plots, then you may have seen them create plots by creating figures and axes and subplots and all kinds of other stuff. And we"
+    },
+    {
+        "chunk_id": "13",
+        "text": "and subplots and all kinds of other stuff. And we are gonna look at that further on in the series, but we're gonna keep it simple now and just use what we have here with plt.plot. So this is going to allow us to work with a single plot, which is perfect for the data that we have right now. So if we were to run this right now, it's not actually gonna show us the plot. If we want the plot to show, then we have to say plt.show. And now if we run this, then we can see that we get a very basic plot"
+    },
+    {
+        "chunk_id": "14",
+        "text": "then we can see that we get a very basic plot here. So what this plotted out is a basic plot where we have our ages down here on the x axis, so between 2535, and those median salaries in that other list are on the y axis here. So this does make sense to me. It looks like the salaries typically get higher as you get older. So Matplotlib comes built in with some nice features, and we can see that this window here has some controls and options down here at the bottom left. So let's go ahead and"
+    },
+    {
+        "chunk_id": "15",
+        "text": "here at the bottom left. So let's go ahead and take a look at some of these. So first, we have, a pan to where we can pan around if we want to see anything in particular. We also have a zoom. So if we click on the magnifying glass and we wanna zoom in on, you know, 26 to 28, then we can do that and then pan around from there. We have the arrows here, and I think these are undo and redo. So if I hit back, then that should take me back to what we did before, and this resumes and things like that."
+    },
+    {
+        "chunk_id": "16",
+        "text": "before, and this resumes and things like that. And, finally, we have, home here. And, also, we have this, which is just more finely detailed zoom configurations here. I hardly ever use that. I usually just use the pan and zoom here. And, lastly, we can save this. So if I, wanted to save this as a PNG, then I could click that and save this plot as a PNG file. So that's a quick little overview of this window here. Okay. So now let me close this down. And now let's look at how to add some more"
+    },
+    {
+        "chunk_id": "17",
+        "text": "down. And now let's look at how to add some more information to our plot. So right now, there's no way to actually tell what that data represents. If we were to send this to somebody or if we were to look at this ourselves, then no one would actually know what that x and that y axis were, supposed to be. There's no labels or anything like that. Now the point of these plots is to visualize the data in the easiest to digest format as possible and relay the information that could just get hidden"
+    },
+    {
+        "chunk_id": "18",
+        "text": "relay the information that could just get hidden in the numbers. So we need to have some labels here to show what this actually represents. So first, let's give our entire plot a title. So to do this, I'm gonna do this right above plot dot show. I'm going to say plt dot title and let's pass in a title of median salary and then I'll say that the salary is in USD by age. Okay? And now to label our x and y axis, it's as easy as saying pltdot xlabel, and we want our x label to be ages. And right"
+    },
+    {
+        "chunk_id": "19",
+        "text": "and we want our x label to be ages. And right below that, I'm going to say plt dot, whoops, y label, and that y label, let's say median salary, and again, we will specify USD. Okay. So now if we run what we have here, then now our plot is a little bit more detailed. So now we have some more useful information here. So we have a plot title up here at the, top that tells us what this chart is about, and our x and our y axis now have labels explaining those as well. Okay. So now let's add another"
+    },
+    {
+        "chunk_id": "20",
+        "text": "those as well. Okay. So now let's add another line to our plot. So let's say that I wanted to also plot the median salaries by age for Python developers specifically. So the values that we have right now are for developers of any language. So now let's do Python. So to do this, we can sim simply create more lists and plot just, like we did the first ones here. So let me close this down. So I grabbed that data from the Stack Overflow survey as well, and I added those to my snippets also. So let"
+    },
+    {
+        "chunk_id": "21",
+        "text": "and I added those to my snippets also. So let me grab those from the snippets, and those are right here, median Python developer salaries by age. So So I'm going to grab this pydevx and this pydevy. So I'm going to go back to my script here and right below my other data, right below where I'm running plt.plot of that other data, I'm going to paste this PYDev data in. And now I can plot those simply by saying plt.plot. And now we want to pass in PIDevx, and we want to pass in PIDevy. Let me get"
+    },
+    {
+        "chunk_id": "22",
+        "text": "PIDevx, and we want to pass in PIDevy. Let me get some spacing there. So now, if I were to actually run this right now, then that would work. But before I do that, if we look at our x axis here, then we are just repeating those same age ranges, from the other list. So we have 25 to 35. So instead of repeating these in both of our plots, let's just rename our x values at the top here and use that for both plots. So instead of dev x and py dev x, I'm going to just remove that py dev x there. And"
+    },
+    {
+        "chunk_id": "23",
+        "text": "I'm going to just remove that py dev x there. And now this x list here at the top, I'm going to rename this to ages_x, ages underscore x. And now I'm going to use that for both plots. So I'm going to use it in my first plot there and replace dev x, and in the second plot, I'm going to replace that PIDev x. So now we're using this same data for our x axis, and the y axis we are plotting different data. So like I said, we could have had that repeated list in there and it would have worked just"
+    },
+    {
+        "chunk_id": "24",
+        "text": "list in there and it would have worked just fine, but this is just a way of cutting down on repeated code. Okay. So now if we run this let me go ahead and make that output little smaller there since we're not using that. So now if I run this, then we can see that now we are getting 2 lines. So that's nice. But we don't know which line is which. So we need to add a legend to tell us which line represents what data. So let me close this plot here. And there are 2 ways of adding legends. So the"
+    },
+    {
+        "chunk_id": "25",
+        "text": "And there are 2 ways of adding legends. So the first way is to do it like this. I could add labels for the legend as a list of values in order, in the order that they were added to the plot. So down here at the bottom whoops. Down here at the bottom actually, let me actually put this below the title here. So I could say plt dot legend, And now we can pass in a list of values in the order that they were added to the plot. So our, all of our developers, this dev y, was added to our plot first"
+    },
+    {
+        "chunk_id": "26",
+        "text": "this dev y, was added to our plot first where we did plt.plot, and the Python developers was added second. So plt.plot here with pydev y. So I could pass in a list and just say alldevs is the first value and Python is the second value. And if I run this, then we can see that that works. We, get a plot and the legend is telling us which line is which here. But there's a way that I actually like to do legends, that I really think is better than this. So let me close down this plot here. Now I"
+    },
+    {
+        "chunk_id": "27",
+        "text": "this. So let me close down this plot here. Now I don't really like this method of adding legends because you have to know the order that all of these things were added to the plot, and I feel like that's extremely error prone. So I think that this is a better way to do it. So we can pass a label argument to our plot methods. So instead, let me copy this part here where I said all devs. Instead, up here where we did our first plot, I can pass in a label argument and say label is equal to all"
+    },
+    {
+        "chunk_id": "28",
+        "text": "in a label argument and say label is equal to all devs for that one. And for the second plot, I can say label is equal to, and this will be Python. And now when we actually run this legend, method here, we can actually do that without any arguments. So I'm just gonna leave that empty. And now it's just gonna use these plot labels instead. So now if I run this, then we can see that that works. But I feel like this is a lot, less error prone and easier to read, and it also kind of self documents"
+    },
+    {
+        "chunk_id": "29",
+        "text": "to read, and it also kind of self documents our code as well. If we look back here at the code, then we can see that this is self documenting in a way where it's telling us what we're actually plotting here. So I think that that's a much better way to do it. Okay. So now that we have those plotted, let's look a bit at how we can change some of the formatting of this plot. So let's say that I wanted some different colors and styles for the lines and things like that. I feel like since one line"
+    },
+    {
+        "chunk_id": "30",
+        "text": "and things like that. I feel like since one line is just developers in general, I'm just gonna make that line gray, and we'll make the Python line blue since that's one of the main colors in in the Python logo. Now there's a way to pass all of this information in all at once, but I hardly ever do it this way, just because I think it's hard to read. So I'll show you a quick example just in case you see this in someone else's code, but then I'll show you how I normally do it as well. So we could"
+    },
+    {
+        "chunk_id": "31",
+        "text": "you how I normally do it as well. So we could pass in all of the information at once by passing in a format string after our y values in our plot method. So let me pull up a web page here and show you what this format string actually expects. So whoops. And I did have it pulled up here, but I may have, overwritten it here. Let me see. Okay. Here we are. Format strings. And let me make this just a little bit larger here so that everybody can see. So we can see here that it says that a format"
+    },
+    {
+        "chunk_id": "32",
+        "text": "So we can see here that it says that a format string consists of a part for color, marker, and a line. So format string looks like this. Marker, line, color. So let's say that for our line graph, we wanted a black dash line. So to do that, we can scroll down here. These are the marker styles. We're not using markers right now, we're using lines. So I'm gonna go down to the line styles. So we can see that just a single dash here is a solid line style. A dash dash is a dash line style, so that's"
+    },
+    {
+        "chunk_id": "33",
+        "text": "A dash dash is a dash line style, so that's what I'm gonna use, but then they also have a couple of others here. Now let's also look at the colors here. So these are the general colors. So b is blue. So if I want a black, then that is k. So if I go back up to our format string here, then it says that, let's see here. Yeah. So if I go up here, yeah. So color marker line. Okay. So now let's go back to our code here. And now let's pass in a format string after our y value. So I'm going to say that"
+    },
+    {
+        "chunk_id": "34",
+        "text": "after our y value. So I'm going to say that I want this one to be black so that was k, and then dash dash is the dash line. So for Python, if I wanted this one to be blue, then I could just pass in a b for blue, and then I'll leave everything else as the default. Since, a solid line is the default, we don't have to change anything there. So now if I save that and run it, then we can see that now our line with all of our developers is this dashed black line here and our Python line is this blue"
+    },
+    {
+        "chunk_id": "35",
+        "text": "black line here and our Python line is this blue line. So we're able to, change that up a little bit. Now like I said, I've never really liked these format strings that contain, the colors and the marker styles and the line styles all in one because I don't feel like that's very readable. I always forget, how to write these down and what these are supposed to be. So I just wanted to show you these in case you saw them in someone else's code, but I prefer to be more explicit and make our code a"
+    },
+    {
+        "chunk_id": "36",
+        "text": "I prefer to be more explicit and make our code a bit more readable. So to do that, we can pass these in as arguments instead. So instead of doing it this way, I'm going to say that color is equal to k, and then I will say line style is equal to dash dash. Now that's a little harder or that's a little more code there, but I think that that is much easier to read. So also down here in the Python plot, I'm gonna say color is equal to b, so for blue, and that should work exactly the same as our"
+    },
+    {
+        "chunk_id": "37",
+        "text": "and that should work exactly the same as our format string worked. But in my opinion, it's just more obvious what's going on there. So if we run that, then we can see that we get the exact same results there. Now if you also wanted to add markers to your lines, then we can do that as well. To do that, we could simply say so after line style here, I'm gonna say marker is equal to. And if you wanna know what marker styles you can use, you can go back to that formatting page where I showed all"
+    },
+    {
+        "chunk_id": "38",
+        "text": "back to that formatting page where I showed all those different, formatting options. But I know that some of these, off the top of my head, I know that, the dot is 1. And let me also put one in here for Python as well. And I know that circle will do like a larger marker there. So now if I save that and run it, then we can see that now, these have markers here. So we have these small markers for all developers and these bigger markers for Python. And I'll be sure to add a link in the description"
+    },
+    {
+        "chunk_id": "39",
+        "text": "And I'll be sure to add a link in the description section below to that formatting page in case you wanna check out more options that you have here. Now I don't really like these markers on this specific chart, so I'm gonna go ahead and go back and just undo a couple of steps here before we put those markers in. Okay. So we can also use hex color values for our lines as well. And that's normally what I use since you have a lot more color options, and it's easier to find color pilots online"
+    },
+    {
+        "chunk_id": "40",
+        "text": "and it's easier to find color pilots online that, look good and contain those hex values. So I have some written down here that I'm going to use for our plots. So for the developer's line, I'm just gonna use a hex value here. So for color, I'm just gonna use a hex value of 444444. And if you don't know how hex values work, the first pair of numbers are gonna be for the red values. The next two numbers are gonna be for the green values, and the last two numbers are gonna be for the blue values."
+    },
+    {
+        "chunk_id": "41",
+        "text": "two numbers are gonna be for the blue values. So with all those being the same, it's going to generate a shade of gray, And this is a darker shade of gray. And you can find hex color palettes online if you would like to come up with some of your own. Now for Python, I'm going to set this to this still blue color that I found online. So I'm going to change this to be a hex value of 5a7d9a. And just to show one more line of information and colors here, let me also add in some JavaScript data that"
+    },
+    {
+        "chunk_id": "42",
+        "text": "let me also add in some JavaScript data that I have here in my snippets as well. So So I'm gonna go back to the snippets, and now since we're sharing the x, we can just copy the y values that I want here. So I'm going to copy these y values, and these are the median JavaScript developer salaries by age. And underneath our Python data, I'm going to paste that in, and let me actually get this, plotting data here beside what it's actually plotting there. Okay. And now let me copy the Python line"
+    },
+    {
+        "chunk_id": "43",
+        "text": "there. Okay. And now let me copy the Python line here, and I'm just going to use that for my JavaScript data. But instead of plotting the py dev y, I'm gonna plot the j s dev y. For the color, I'm gonna change this to a yellowish color. So this will be a d a d three b. And for the label, I'm gonna say JavaScript. Okay? So if we run this, then we can see that now we get three lines here on our plot. All of them, have labels and legends, and they all have their own customized colors and styles as"
+    },
+    {
+        "chunk_id": "44",
+        "text": "have their own customized colors and styles as well. So that looks pretty good. Now I'm not sure why the Python developers in the survey are reporting higher salaries like this. I didn't expect it to be that much of a difference between, you know, the different types of developers, but that's just what was in the data. Now I feel like these lines are a little bit thin right now. So let's say that we wanted, the lines for the specific languages to be a little bit wider so that they're more"
+    },
+    {
+        "chunk_id": "45",
+        "text": "to be a little bit wider so that they're more emphasized and just keep general developers as it is. So to do that, we can add another argument to both of our, plot methods here. And to make these lines a little thicker, I can just say line width is equal to, and I think the default is 1, so let's try 3 and see what this looks like. So I'll do that with both Python and JavaScript, and I'm gonna leave, the all developers as it is. Now this could actually cover up our dotted line because lines are"
+    },
+    {
+        "chunk_id": "46",
+        "text": "cover up our dotted line because lines are layered in the order that they're added. So instead, I'm going to move our dotted line to the bottom here. So I'm going to grab this plot and grab this data, and I'm gonna move that to the bottom so that it's plotted on top, just in case it would have been hidden behind any of those other two lines. So do you remember earlier when we changed our legend to use these labels instead of passing them directly into our legend method? Well, this is why that"
+    },
+    {
+        "chunk_id": "47",
+        "text": "into our legend method? Well, this is why that was a good idea, Because moving the plotting order like we did just now, would have meant that we needed to manually come down here and change the order that we passed in those legends also. And if we forgot that, then our plot would just be wrong. But since we did it this way by using these labels instead, that just updates automatically. So that's why I prefer that method. So let's go ahead and run what we have here. And we can see that now our"
+    },
+    {
+        "chunk_id": "48",
+        "text": "what we have here. And we can see that now our language lines are a bit thicker, but we can still see that, all developers line over top of the JavaScript line here where it would have been hidden behind. Okay. So that looks pretty good. Now I'm on a larger monitor here, but whenever I was running this on my laptop, I noticed some weird padding issues. If you ever notice that your padding isn't very good and that stuff is getting cut off, then there's a way that we can take care of that. And"
+    },
+    {
+        "chunk_id": "49",
+        "text": "there's a way that we can take care of that. And let me go back to the code here. And to take care of that, I'm just gonna do this right above, plt.show. To do this, I'm gonna add in a line that automatically adjusts our plot parameters to give some padding. And to do this, it is just plt dot tight_layout, and that is a method. So if I run this now, then it kinda looks the same on my machine, but on my laptop, it made the padding a lot better whenever I ran that. Now there's one more thing"
+    },
+    {
+        "chunk_id": "50",
+        "text": "whenever I ran that. Now there's one more thing about the plot that I think that we could improve here. Now if we look at this, if we go out here further to the right, it might be harder to tell when we cross certain salaries. So if we put in a grid, then I think it would make this a lot easier to read. So if we go back to our code, we can put in a grid really easily, just by saying, and I'll just do this above where we currently are. I'll just say plt.grid, and we just have to pass in a value"
+    },
+    {
+        "chunk_id": "51",
+        "text": "say plt.grid, and we just have to pass in a value of true. So if we run that, then now we can see we have a grid. So we can tell exactly when each of these lines crosses certain salaries and ages here. Okay. So that's looking pretty good. Now one more thing before we finish, let's look at how we can change the style of our plots and make these look a bit better. Now we have some built in styles that we can use with matplotlib. So let me go to the top of our file here and let's use some of these"
+    },
+    {
+        "chunk_id": "52",
+        "text": "top of our file here and let's use some of these here. So underneath our imports, I'm gonna say plt dot style. And to see the available styles that we can, use, we can access a list of available styles by saying plt.style. Available. Now that's not a method, so you don't want to put in parentheses there. It's just an attribute, so don't execute that. So now let's print that out to see what styles we have available. And I'm going to comment out our plt.show so that a plot doesn't show up when we"
+    },
+    {
+        "chunk_id": "53",
+        "text": "plt.show so that a plot doesn't show up when we run this. So I'm gonna run this, and I'm gonna make our output a little bigger here so that we can see these. And these are the available styles that we can use that are built in to Matplotlib. And you can experiment around with these and see which ones you like. Personally, I really like the 538 style, and I also like the, seaborne and the ggplot styles. And I'll probably use a, you know, few of those throughout the series just so we can get an"
+    },
+    {
+        "chunk_id": "54",
+        "text": "those throughout the series just so we can get an idea of what some of these different styles looks like. So let's say that I wanted to use the 538 style. So to do this, I could simply say I'm gonna overwrite our print statement here. I'm gonna say plt dot style dot use and then pass in the string of 538. So now let me uncomment out plt.show, and let me run this. So when I run this, I don't know if you remembered what that looked like before, but now this is a bit of a different style. And"
+    },
+    {
+        "chunk_id": "55",
+        "text": "but now this is a bit of a different style. And these styles all have their own unique way of coloring lines and stuff like that too. So you could also try try plotting these without your custom colors and see if you like the styles default colors more than the ones that we specifically added for our lines. So I'm actually gonna try that. I'm gonna remove my colors and line widths for Python and JavaScript plots, and I'll just leave the all devs plot as it is. So for Python and JavaScript, I'm"
+    },
+    {
+        "chunk_id": "56",
+        "text": "plot as it is. So for Python and JavaScript, I'm going to remove the line width and I'm gonna remove the color. And I'll do that for JavaScript as well. And let me make this output a little smaller here. And I'm also gonna remove the grid as well since some of these styles also have their own grid preferences Okay. So now with all those in place, first, let me comment out where I'm using the style and run that plot. So that is the default matplotlib, style. And now let me plot with the 538. So"
+    },
+    {
+        "chunk_id": "57",
+        "text": "style. And now let me plot with the 538. So if I look at both of these, then you can see the difference here. There is a, definitely a different style with the 538 plot over here. And I really like the 538 default colors and styles here. Now if you wanna play around with the different styles, then it's as easy as choosing another one from the list that we printed out just a second ago. So if I wanted to try a ggplotstyleinstead, then I could just say dot useggplot. If I run that, then we can"
+    },
+    {
+        "chunk_id": "58",
+        "text": "say dot useggplot. If I run that, then we can see that now we get a different looking style. And this one kind of has like a grayish background, with some thinner lines here. Now speaking of styles, let me show you something else that I think is pretty cool that's built in the Matplotlib. And it's nice if you have like a blog or something where you're making some plots and wanna have a little bit of fun with it. Now most of you have probably heard of xkcd comics. They publish some online comics"
+    },
+    {
+        "chunk_id": "59",
+        "text": "of xkcd comics. They publish some online comics that are usually pretty funny, and a lot of those are tech related also. For those of you that have watched my videos in the past, then you might know that the Python has a standard library module called antigravity, and it actually opens up a standard library module called anti gravity, and it actually opens up one of their comics in the browser. Anyways, they have a pretty distinct style with their comics, And matplotlib actually has a method"
+    },
+    {
+        "chunk_id": "60",
+        "text": "comics, And matplotlib actually has a method that will mimic the style of their comics, and it's super easy to use. So in order to use that, all we'd have to do, I'm gonna overwrite, this style line here. Now this is actually a method instead of a style. So this will be plt.xkcd, and that is a method. And with that small change in place, if I run this and make this a little larger, then now you can see that this is kind of in the style of those xkcd comics. So it kinda looks like a graph that"
+    },
+    {
+        "chunk_id": "61",
+        "text": "xkcd comics. So it kinda looks like a graph that you would see, embedded in a comic somewhere. It's kinda got these squiggly lines here that kinda makes it look like it was hand drawn by somebody. So I think that's a pretty cool built in feature that matplotlib has, and it's a fun way to mix up your plots if you're making them for something that isn't too serious. So if you wanted to actually put this on your website or something, then, you could just save this as a PNG, like we saw before, and"
+    },
+    {
+        "chunk_id": "62",
+        "text": "just save this as a PNG, like we saw before, and then upload it that way. Now we saw how to do that here within the window, but we can also do this programmatically as well. So if I close this plot here, if we go back to the code, I'm just going to save this, right here before plt.show. In order to save this as a a png, then we can simply say plt.savefig, and now I'm going to, just save that as plot dot PNG or something like that, and that will save an image called plot dot PNG to my current"
+    },
+    {
+        "chunk_id": "63",
+        "text": "save an image called plot dot PNG to my current directory. Now if I wanted to save it somewhere else, then you can also, pass in a full path here as well, and it'll save it to whatever path you pass in. So I'm going to run this and it's gonna show that graph there. But if I open up my current directory, we can see that I have a plot dot png here and if I open that, then we can see that it saved that png file here in my directory. Okay. So real quick, let me do one more thing before we finish up"
+    },
+    {
+        "chunk_id": "64",
+        "text": "let me do one more thing before we finish up here. So I mentioned towards the beginning of the video that I'd, plot the data for ages of 18 to 55. That's the larger set of data that they had in the survey, if anyone was interested in seeing that. Now I didn't do it earlier because I didn't wanna crowd the screen with tons of data, but let me grab that from my snippets file and see what this looks like. So here within the snippets, these are all of the ages that had enough data here. They had"
+    },
+    {
+        "chunk_id": "65",
+        "text": "of the ages that had enough data here. They had more data, ages than this, but these were the only ones that had, I think it was like over a 100 answers to the, question or something like that. I can't remember exactly the the, the cutoff that I used there, but it was something like that. There were some people who, you know, in their 8 or eighties nineties that answered the survey, but there were so few of them that it was hard to get a, a mean that was trustworthy. So, these are the ones that"
+    },
+    {
+        "chunk_id": "66",
+        "text": "that was trustworthy. So, these are the ones that had, you know, hundreds of answers. So, lastly, let me grab this last list here. This will be the last one that I need to replace. And, again, these will be available for download on my GitHub page if anybody else wants to follow along. So now that we have all that data, copied and pasted into our script, now let me save that and run it. And now this is the data for, all of those ages, and the median salaries. So it looks like that big gap"
+    },
+    {
+        "chunk_id": "67",
+        "text": "median salaries. So it looks like that big gap between Python developers and other developers was mainly between the ages of 2535. That's what we saw here. And once we plot the rest of these, then they're a bit more in line. The other languages catch up around in here, and Python doesn't have such a big gap anymore. But it still looks like Python, it does have, the leverage here in most of these ages though. Okay. So before we end here, I'd like to also mention the sponsor of this video, and"
+    },
+    {
+        "chunk_id": "68",
+        "text": "to also mention the sponsor of this video, and that is brilliant.org. So in this series, we've been learning about mat plotlib and how to plot data in Python, and Brilliant would be an excellent way to supplement what you learn here with their hands on courses. They have some excellent courses covering the fundamentals of statistics, and these lessons do a deep dive on how to think about and analyze data correctly. They even use Python in their statistics courses and will quiz you on how to"
+    },
+    {
+        "chunk_id": "69",
+        "text": "statistics courses and will quiz you on how to correctly analyze the data within the language. Their guided lessons will challenge you, but you also have the ability to get hints or even solutions if you need them. It's really tailored towards understanding the material. They've also recently released a programming with Python course, and they even have a coding environment built into their website so that you can run code directly in the browser. And that is a great way to compliment watching"
+    },
+    {
+        "chunk_id": "70",
+        "text": "And that is a great way to compliment watching my tutorials because you can apply what you've learned in their active problem solving environment, and that helps to solidify that knowledge. So to support my channel and learn more about Brilliant, you can go to brilliant.orgforward/cms to sign up for free. And, also, the first 200 people that go to that link will get 20% off the annual premium subscription, and you can find that link in the description section below. Again, that's"
+    },
+    {
+        "chunk_id": "71",
+        "text": "in the description section below. Again, that's brilliant.orgforward/ cms. Okay. So I think that is gonna do it for our first Matplotlib video. I hope you feel like you got a good introduction for how to create some simple plots in Python and also how to customize these in different ways. In the next videos in this series, we're gonna be learning how to create all kinds of different plots. So we're gonna learn how to create bar charts, pie charts, scatter plots, histograms, stack plots. We're"
+    },
+    {
+        "chunk_id": "72",
+        "text": "scatter plots, histograms, stack plots. We're gonna be plotting time series data and things like that. We're also gonna learn how to create multiple subplots in case you wanna plot more than one thing at a time. So in the next video, we're gonna be learning how to create bar charts, and we're also gonna learn how to load in data from a CSV instead of having the data directly in our Python scripts like we did here. So be sure to stick around for that. But if anyone has any questions about what"
+    },
+    {
+        "chunk_id": "73",
+        "text": "that. But if anyone has any questions about what we covered in this video, then feel free to ask in the comment section below, and I'll do my best to answer those. And if you enjoy these tutorials and would like to support them, then there are several ways you can do that. The easiest way is to simply like the video and give it a thumbs up. And also, it's a huge help to share these videos with anyone who you think would find them useful. And if you have the means, you can contribute to Patreon,"
+    },
+    {
+        "chunk_id": "74",
+        "text": "have the means, you can contribute to Patreon, and there's a link to that page in the description section below. Be sure to subscribe for future videos, and thank you all for watching."
+    }
+]

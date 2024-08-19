@@ -1,0 +1,174 @@
+[
+    {
+        "chunk_id": "0",
+        "text": "Hey there. How's it going everybody? In this video, we're going to be going over subplots. So so far in this series, we've simply been creating our plots with the pyplot object and that works great for what we've done so far. But if you want additional plots or if you wanna work with plots in a more object oriented manner, then it's best to create your plots with the subplots method. A lot of people prefer to create their plots this way even if they're only creating a single plot. So in this"
+    },
+    {
+        "chunk_id": "1",
+        "text": "they're only creating a single plot. So in this video, we're gonna see how to create our plots using the subplots method and go back over some of the plots that we created earlier in the series and see what changes need to be made in order to use subplots for those examples. Now I would like to mention that we do have a sponsor for this series of videos, and that is brilliant.org. So I really wanna thank Brilliant for sponsoring this series, and it would be great if you all could go and check"
+    },
+    {
+        "chunk_id": "2",
+        "text": "it would be great if you all could go and check them out using the link in the description section below and support the sponsors. And I'll talk more about their services in just a bit. So with that said, let's go ahead and get started. Okay. So I've got some sample code pulled up here in my script. And if you've been following along with the series, then you'll likely recognize the other matplotlib code that I have here at the moment. But if not, then let me go over this really quick. So this"
+    },
+    {
+        "chunk_id": "3",
+        "text": "then let me go over this really quick. So this is actually a plot that I created in the first, video of the series, but we're loading in this data, using a CSV file here instead. Okay. So let me go over this. So first, we're importing pandas here at the top, then we're also importing the, pyplot module from matplotlib. We are using the seaborne style for these plots to just make them look a little bit better here. And now we're loading in this data from this CSV file using Pandas, read CSV"
+    },
+    {
+        "chunk_id": "4",
+        "text": "data from this CSV file using Pandas, read CSV method. So what this is doing is it's going and getting the age column from that CSV file, which if we look at the CSV file, these are the median salaries for these ages, for the respondents who answered this survey. So for age 18, these are all the median salaries, 19, median salaries, and so on. So our ages here, when we say data is equal to age and getting that key, it's setting it equal to that entire age column. So dev salaries, we're getting"
+    },
+    {
+        "chunk_id": "5",
+        "text": "entire age column. So dev salaries, we're getting the all devs column, py salaries, we're getting the python column, and js salaries, we're getting the JavaScript column. And then we are plotting all of these out. So since we have plt.plot3 times, that means that we're gonna have 3 lines on our line plot. So the first plot here is the Python salaries with our label. The next is the JavaScript salaries and then the all developers plot, and we're also giving this one a custom color and a dash"
+    },
+    {
+        "chunk_id": "6",
+        "text": "also giving this one a custom color and a dash line style. Then we are printing out the legend so that we know what is what. We're giving this a title. We are setting the x label and the y label for our axes. We have a tight layout here, which, means that we are getting some automatic padding for our plot. And then finally, we're doing plt.show, which actually shows our plot. And as usual, I'm gonna put a link in the description section below, that links to this code on my GitHub if anybody"
+    },
+    {
+        "chunk_id": "7",
+        "text": "that links to this code on my GitHub if anybody wants to download that or copy and paste this and follow along. Okay. So let me just run this really quick using the plt.plot method that we're using now, to see what we can expect here. And we have seen a plot similar to this, earlier in the series, so this might not look new to all of you. Okay. So now let me close that down. So that's what we should expect there. Okay. So we can see that every time we're doing something with our plot, we are"
+    },
+    {
+        "chunk_id": "8",
+        "text": "time we're doing something with our plot, we are using the plt object that we imported. That's that pyplot object. We never actually created that object ourselves. Now that might be weird for some people who are used to doing coding in a more object oriented manner. We might think at some point we should have done something like this. So we maybe should have said, like, plt is equal to, plot and created a new instance of a plot. And we can do something like that, and that's what we'll be"
+    },
+    {
+        "chunk_id": "9",
+        "text": "do something like that, and that's what we'll be looking at in this video. So the way that we're doing it now is called stateful. And it's called stateful because we're importing this pyplot object, and we, it has a current state in terms of what figure we're currently working with and what axes we're currently working with and things like that. Now we haven't talked much about figures and axes so far in the series because we've been working with a single figure and a single axis object. So"
+    },
+    {
+        "chunk_id": "10",
+        "text": "with a single figure and a single axis object. So what are the figure and axes? Well, the figure is the container holding our plots, so you can think of that as that whole window, that shows us when we that when we run our code. And the axes are the actual plots, so a figure can have multiple plots. In this series, we've seen how to work with one plot within one figure, so just one axis, but we can have more than one, and we'll see how to do that in this video. So there have been a few times in"
+    },
+    {
+        "chunk_id": "11",
+        "text": "in this video. So there have been a few times in this series where we have used these methods of pltdot, GCF to get the current figure, and we have also used GCA for get current axes. And, like I said, those will get the current figure and axes for your plot. And you can switch between different ones, so that's the stateful way of doing it. But many people prefer, myself included, to use the more object oriented approach when working with multiple figures and axes. So to do this, we can use the"
+    },
+    {
+        "chunk_id": "12",
+        "text": "figures and axes. So to do this, we can use the subplots method. So let's take a look at this. Right now, let's simply recreate the same plot that we currently have, but instead of using the pyplot object that we imported, we'll instead instantiate a figure and an axis. So to do this, I'm going to get rid of those examples there. Down here below my data, I'm simply going to say fig, comma, ax for axes is equal to plt.subplots, and that is a method. Now our axes here, which you can just think of"
+    },
+    {
+        "chunk_id": "13",
+        "text": "Now our axes here, which you can just think of as plots, is only set to a single axis at the moment, or a single plot. That's because by default, subplots create a figure and then specify a certain number of rows and columns of axes. If we don't pass in our number of rows and columns, then it just defaults to a 1 by 1, so 1 row and 1 column, which is simply one axis. So let's update our code to plot on this axis that we just created instead of using our pyplot object. For some cases, this is as"
+    },
+    {
+        "chunk_id": "14",
+        "text": "our pyplot object. For some cases, this is as simple as just using your, axis here instead of thepyplot object. So for example, all of the places where we said plt.plot, we can just replace those with ax. Plot. And where we have plt.legend, we can simply change that to use ax too. So I'll say ax.legend. Now when it comes to the titles and on the x and y labels, these are a bit different. So instead of using plt dot title and xlabelandylabel, we're instead going to do set underscore with those."
+    },
+    {
+        "chunk_id": "15",
+        "text": "instead going to do set underscore with those. So I'll do set underscore title, set_xlabel, and set underscore ylabel. So I'm not exactly sure why they did that with the naming conventions, but that's just how it's done. Okay. And we're going to leave everything else the way that it is. Tight layout is a method for our pie plot object, so that stays the same, and so is the show method that is for the pie plot object. So we can leave those as is. Okay. So now if we run this whoops. And I made a"
+    },
+    {
+        "chunk_id": "16",
+        "text": "Okay. So now if we run this whoops. And I made a mistake here. You guys probably saw that as I did it, but I never actually put ax here. So this is axsettitle, ax.setxlabelandax.set ylabel. Sorry about that. Okay. So save that and run it. And now we can see that we get the same plot that we got before, but now we're using this new axis. Okay. So why is this useful? Why are we learning this? Well, let's say instead of having all of this data in one plot, maybe we want, this broken up into"
+    },
+    {
+        "chunk_id": "17",
+        "text": "in one plot, maybe we want, this broken up into multiple plots. So let's say that we wanted the Python and JavaScript plots together on one plot, but then we wanted these, this all developers plot to be on its own. Well, to do this, we can just add more axes and do it that way. So the first argument to the subplot's method is the number of rows and the number of columns. By default, it's 1 by 1, so that's why we get 1 axis. But we can change that to be a 2 by 1 for 2 rows of axes and 1 column,"
+    },
+    {
+        "chunk_id": "18",
+        "text": "to be a 2 by 1 for 2 rows of axes and 1 column, or however we'd like to do it. I'm gonna do 2 rows and 1 column, but you could do, 1 row, 2 columns, or however you want. But this is also gonna change how the axes are returned. So to show you an example of this, let me comment out everything, below here. So I'm gonna comment out from data all the way down to show, and let's see what we are getting for this returned, axi here. So I'm going to print this out. So I will print ax, and I will run"
+    },
+    {
+        "chunk_id": "19",
+        "text": "this out. So I will print ax, and I will run this. And now if I make this a little larger here, we can see that this ax variable is equal to a single axis subplot. But now let's say that I wanted 2 rows and 1 column. So to do that, I could simply say n rows is equal to 2 and ncols is equal to 1. So now if I run this, then now we can see that our ax variable is a list of axes subplots. And now let's also see what happens if we do 2 rows and 2 columns. So I will put in 2 rows and 2 columns and"
+    },
+    {
+        "chunk_id": "20",
+        "text": "So I will put in 2 rows and 2 columns and run this. And now this gets a little more complicated. Now we can see that we have an outer list here, and within, this outer list has 2 values. And those two values are a list, so this is one value here. It's a list of 2 axes subplots. So a total of 4 axes total. Now that might be a little confusing with those nested like that, but you'll need to know how these are getting returned if you wanna unpack those in a certain way. But let's keep it simple"
+    },
+    {
+        "chunk_id": "21",
+        "text": "those in a certain way. But let's keep it simple here, and let's go back to 2 rows and 1 column, which is just the list of 2 axes subplots here. Okay. So that gives us our 2 axes, which is what we wanted in order to break our data up onto 2 plots. Now these two plots will still be on the same figure, which is the overall window. If you want them to be on different figures, then we'll take a look at that in just a second as well. Okay. So instead of having these 2 axes in a single variable of a"
+    },
+    {
+        "chunk_id": "22",
+        "text": "of having these 2 axes in a single variable of a x like this, let's instead unpack these, And I can do that since we are returning, a list of 2 values here. We can then just unpack this here and I'll call this ax1 and this ax2. And now I will print out ax1 and I will print out ax2. So let's run that, and now we can see that we are getting those axesubplots individually. Now if you don't know what I did with that unpacking and would like to see more examples of how unpacking works, then I do"
+    },
+    {
+        "chunk_id": "23",
+        "text": "more examples of how unpacking works, then I do have a section on unpacking in my Python quick tips video, so I'll leave a link to that video in the description section below if anyone is interested in learning more about that. Okay. So now let's uncomment out our other code here and plot this data on our different axes. So I'm going to uncomment out our data and uncomment out where, we plotted these out. Now I'm going to remove these print statements here, and I think I'm going to want the all"
+    },
+    {
+        "chunk_id": "24",
+        "text": "here, and I think I'm going to want the all developers plot to be on top. I don't have to move it on top in the code, but since I'm having it on axie 1, I just want to move it up so that it kinda makes more sense, visually. So I'm gonna say axone.plot and plot out that all developers plot there. And now I will do ax 2 plot for Python and JavaScript. And now we can do different legends and titles and x and y labels for these as well. So I can copy this and paste it down here. So now I can do let"
+    },
+    {
+        "chunk_id": "25",
+        "text": "this and paste it down here. So now I can do let me, exit that output so that we can see here. So I'll do ax1 for all of these here, and I will do ax2 for all of these here. Okay. So now we have all of those changed. So now if we run this, then we can see that now we have one figure with 2 different plots. So these are the 2 rows of axes. Okay. So we managed to split these up how we liked, but a couple of things pop out to me here. So first, since we are on one figure together, we don't really"
+    },
+    {
+        "chunk_id": "26",
+        "text": "we are on one figure together, we don't really need a title for both of these. We can see that we have a title here and a title here. So let's just see, let's just use the title on top and not do the title for the second one here. So I'm going to remove that for ax2. So down here, we're doing ax2.setTitle. I'm going to remove that. And also, we also have the x axis labeled on both plots as well, but I think labeling it on the bottom axis is good enough. So I'm also going to remove the x label"
+    },
+    {
+        "chunk_id": "27",
+        "text": "enough. So I'm also going to remove the x label from the axis 1 here. So I'm going to remove that. Okay. So now if we run that with those changes in place, then I think now this looks a little bit better. We only have one title here, and now we only have one x label here for our bottom plot, and we can kind of insinuate that these are, you sharing this x axis here. Now if you also only wanted the x tick marks on the bottom plot also, then we can also do that. And we can do that by passing in an"
+    },
+    {
+        "chunk_id": "28",
+        "text": "also do that. And we can do that by passing in an argument to the subplot's method called share x. So let me close this down. Let's go up to our subplots method, and I'm going to say share x oops. Let me spell that correctly. And I'm gonna set that equal to true. And there's also a share y. So share x will only label the bottom ticks for 2 rows, and share y will only label the leftmost ticks for 2 columns. So if we run this, then we can see that now, we were we did have, these x tick marks here"
+    },
+    {
+        "chunk_id": "29",
+        "text": "now, we were we did have, these x tick marks here on this plot as well. But since we're sharing this x, now we can see that we only have these listed on the bottom. So we can see that's nice and cleaned up compared to the first time that we actually ran that. Okay. So we have a nice figure here with 2 different plots, but what if we wanted these plots to be on 2 different figures instead of the same plot? Well, that's easy to do also. We just need to create another figure and an axis, the same"
+    },
+    {
+        "chunk_id": "30",
+        "text": "to create another figure and an axis, the same as we did before. So here at the top where I'm creating these using the subplots method, I wanna change this just so or so that it only returns, one figure and one axis. So I'm going to take out those 2 rows and that one column. And now I'm going to just set that equal to ax 1. Now I'm going to copy this and add in another figure. And, also, I want to call this Fig 1. So I want this to be Fig 2, and I want this to be, axis 2. And now we already had"
+    },
+    {
+        "chunk_id": "31",
+        "text": "I want this to be, axis 2. And now we already had those axis ones, plotted down here, so we don't have to change anything there. We could add that title back in and that x label back in for ax1ax2 down here. But just to see what this looks like, let's go ahead and run this, and we can see that now we get 2 figures here. So with those small changes, we were actually able to create 2 different figures here, and we can interact with these, just like we would any other figures. So in the very first"
+    },
+    {
+        "chunk_id": "32",
+        "text": "we would any other figures. So in the very first video of this series, I showed you how you could save a figure as an image using the save fig method. Well, if we wanted to save both of these figures, then we can simply run save fig, on those figure objects. So down here below everything, if we wanted to save those, I could simply say figone.savefig, and I could call this figone.png. Let me copy this, and I will do fig 2 here for the file name and for the variable there. And now if I run this,"
+    },
+    {
+        "chunk_id": "33",
+        "text": "for the variable there. And now if I run this, if, it's still gonna pop up with those plots, I'm gonna close those for now. But if I look in my directory here, then I have a fig 1 and I have a fig 2. So it saved both of those. So it's nice being able to generate multiple plots at a time like this and save them to our file system. So this would be great for automating data analysis, where you're plotting data in a background script, and you could just have it save the plots for you, and then"
+    },
+    {
+        "chunk_id": "34",
+        "text": "just have it save the plots for you, and then view them that way, rather than jumping into the code, and then view them that way, rather than jumping into the code and, looking at them that way. So there's tons of use cases for things like this. Okay. So we're just about finished up here. But before we end, I'd like to mention the sponsor of this video, and that is brilliant.org. So in this series, we've been learning about matplotlib and how to plot data in Python, and Brilliant would be an"
+    },
+    {
+        "chunk_id": "35",
+        "text": "to plot data in Python, and Brilliant would be an excellent way to supplement what you learn here with their hands on courses. They have some excellent courses covering the fundamentals of statistics, and these lessons do a deep dive on how to think about and analyze data correctly. They even use Python in their statistics courses and will quiz you on how to correctly analyze the data within the language. Their guided lessons will challenge you, but you also have the ability to get hints or"
+    },
+    {
+        "chunk_id": "36",
+        "text": "but you also have the ability to get hints or even solutions if you need them. It's really tailored towards understanding the material. They've also recently released a programming with Python course, and they even have a coding environment built into their website so that you can run code directly in the browser. And that is a great way to compliment watching my tutorials because you can apply what you've learned in their active problem solving environment, and that helps to solidify that"
+    },
+    {
+        "chunk_id": "37",
+        "text": "environment, and that helps to solidify that knowledge. So to support my channel and learn more about Brilliant, you can go to brilliant.orgforward/cms to sign up for free. And also, the first 200 people that go to that link will get 20% off the annual premium subscription, and you can find that link in the description section below. Again, that's brilliant.orgforward/ cms. Okay. So I think that's gonna do it for this video. So I think everything that we've covered about matplotlib up to this"
+    },
+    {
+        "chunk_id": "38",
+        "text": "that we've covered about matplotlib up to this point covers many of the basics for creating nice looking plots from your data, and also how to customize those in different ways. So from this point, I'm going to begin working on a series of videos covering the Pandas library and how to do in-depth data analysis with that. Pandas actually uses matplotlib for plotting out information itself. So knowing matplotlib will be a great thing to know for anyone who thinks they're interested in watching"
+    },
+    {
+        "chunk_id": "39",
+        "text": "anyone who thinks they're interested in watching the panda series when I finish that and it's released. But if anyone would like to see me add to this matplotlib series, then please let me know if there's anything you are wanting to learn that I didn't cover in this series, or if there's anything that I just forgot and didn't cover. And if I get enough requests, then I can always continue adding to this series in the future. And I'm also gonna try to do a video in the near future showing"
+    },
+    {
+        "chunk_id": "40",
+        "text": "try to do a video in the near future showing exactly how I downloaded and parsed out a lot of this data. So a lot of this, like I said, I got from the 2019 Stack Overflow developer survey that I used in a lot of these videos. And it's definitely a good practice going out there and grabbing real world data and seeing how to get, what you want out from that data, and write your own scripts to plot out exactly what you want there. So be on the lookout for that video because I think that'll be a"
+    },
+    {
+        "chunk_id": "41",
+        "text": "for that video because I think that'll be a great exercise for most people. But with that said, if anyone has any questions about what we covered in this video, then feel free to ask in the comments section below, and I'll do my best to answer those. And if you enjoy these tutorials and would like to support them, then there are several ways you can do that. The easiest way is to simply like the video and give it a thumbs up. And, also, it's a huge help to share these videos with anyone who you"
+    },
+    {
+        "chunk_id": "42",
+        "text": "help to share these videos with anyone who you think would find them useful. And if you have the means, you can contribute through Patreon, there's a link to that page in the description section below. Be sure to subscribe for future videos, and thank you all for watching."
+    }
+]
