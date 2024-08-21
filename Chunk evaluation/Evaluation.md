@@ -43,14 +43,7 @@ You can see in the screenshots when i ask the question "How can I group a DataFr
 ![My Image](./chunk_output.png)
 
 
-### 3. Cost Efficiency
-- **Definition:** The computational and financial cost of processing and querying chunks.
-- **Evaluation:** Analyze the token usage for various chunk sizes and overlaps. A balance between chunk size and overlap should minimize token costs while retaining information.
 
-## Challenges Faced
-- Balancing between large chunk sizes for cost efficiency and smaller chunks for better accuracy and relevance.
-- Ensuring that overlapping text does not introduce redundancy or confusion.
 
 ## Conclusion
-The chosen strategy of chunking by character length with overlap should provide a good balance, but further testing and adjustments may be necessary based on the evaluation results.
-
+The chosen strategy of chunking by character length with overlap strikes a good balance between keeping the text easy to understand and making it efficient for the system to retrieve information. Using RecursiveCharacterTextSplitter, we can ensure that the chunks are clear and complete, with important parts of the text not being cut off. The overlap between chunks helps keep key information intact, making sure that the system can provide accurate and useful responses. This method keeps the chunks small enough for easy processing but large enough to include important details, making it a solid approach for the challenge.
