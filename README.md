@@ -48,7 +48,6 @@ Now wait for the result in the terminal
 
 
 ➡ **Notes**
-
     Ensure you have the `.env` file configured with your OpenAI API key before running the scripts.
 
 
