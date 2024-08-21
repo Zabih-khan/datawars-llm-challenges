@@ -1,17 +1,5 @@
 
 
-# Agent Workflow
-
-## 1. User Input
-The student inputs a question, such as "How do I group a DataFrame in Pandas?"
-
-## 2. Query the Vector Store
-The agent retrieves the most relevant transcript chunks using similarity search based on embeddings.
-
-## 3. Generate a Response
-The agent combines the retrieved transcript chunks and user query into the final prompt for the language model to generate an answer.
-
-
 # Define the Prompts
 
 ```
@@ -28,4 +16,19 @@ Answer:
 
 ```
 
+# Implement the Retrieval-Augmented Generation (RAG) Chain
+**Retrieve Context:** Use the vector store to fetch relevant chunks based on the user's query.
+**Generate Response:** Use the LLM to generate an answer based on the retrieved context and the defined prompts.
 
+
+
+# Agent Workflow
+
+## 1. User Input
+The student inputs a question, such as "How do I group a DataFrame in Pandas?"
+
+## 2. Query the Vector Store
+The agent retrieves the most relevant transcript chunks using similarity search based on embeddings.
+
+## 3. Generate a Response
+The agent combines the retrieved transcript chunks and user query into the final prompt for the language model to generate an answer.
