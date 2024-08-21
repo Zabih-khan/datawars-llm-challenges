@@ -47,7 +47,7 @@ Now wait for the result in the terminal
     `Notebook.ipynb` Provides a comprehensive overview and step-by-step explanation of the code and processes involved.
 
 
-➡ **Notes**
+### ➡ Notes
     Ensure you have the `.env` file configured with your OpenAI API key before running the scripts.
 
 
