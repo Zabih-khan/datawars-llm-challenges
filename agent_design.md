@@ -37,5 +37,5 @@ prompt_template = ChatPromptTemplate.from_template(
 ```
 ## Step 6: Implement the Retrieval-Augmented Generation (RAG) Chain
 
-**Retrieve Context:** Use the vector store to fetch relevant chunks based on the user's query.
-**Generate Response:** Use the LLM to generate an answer based on the retrieved context and the defined prompts.
+- **Retrieve Context:** Use the vector store to fetch relevant chunks based on the user's query.
+- **Generate Response:** Use the LLM to generate an answer based on the retrieved context and the defined prompts.
