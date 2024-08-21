@@ -36,8 +36,8 @@ The overlap of 100 ensures some context is preserved between chunks, so sentence
 
 ## Metrics
 
-### 2. Correctness
-You can see in the screenshots when i ask the question "How can I group a DataFrames in Pandas?" it retrive the accurate chunks. At time 14:50 you can comparre with the actual video trancript.
+### Correctness and Relevancy
+You can see in the screenshots when i ask the question "How can I group a DataFrames in Pandas?" it retrive the accurate chunks. At time 14:50 you can compare with the actual video trancript in the screenshot.
 
 ![My Image](./original_content.png)
 ![My Image](./chunk_output.png)

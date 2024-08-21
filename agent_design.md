@@ -1,3 +1,5 @@
+
+
 # Agent Workflow
 
 ## 1. User Input
@@ -9,7 +11,21 @@ The agent retrieves the most relevant transcript chunks using similarity search 
 ## 3. Generate a Response
 The agent combines the retrieved transcript chunks and user query into the final prompt for the language model to generate an answer.
 
+
+```
+
 ## 4. Present the Answer
 The agent provides the student with a concise answer and includes the video title and timestamp for further reference.
+
+
+You are an assistant for answering questions based on educational content about Pandas and Matplotlib. Use the following pieces of context to answer the question. If you don't know the answer, state that you don't know. Keep your answer concise and relevant to the question.
+
+**Question**: {input}
+
+**Context**: {context}
+
+**Answer**:
+
+```
 
 
