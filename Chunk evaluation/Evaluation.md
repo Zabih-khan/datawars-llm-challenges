@@ -21,13 +21,13 @@ Chunk size and overlap: 1000 characters is a typical sweet spot for LLM models t
 
 
 
-Why I Chose Length-Based and Sentence Boundary Chunking in Your Case:
-Simplicity and Efficiency:
+### Why I Chose Length-Based and Sentence Boundary Chunking in Your Case:
+**Simplicity and Efficiency:**
 
 You want to build a retrieval-augmented generation (RAG) system that can answer questions. Using fixed chunk sizes is an efficient way to manage token costs and ensure each chunk fits into the LLM's token limits.
 Sentence boundary chunking provides a nice balance of coherence and ease of implementation.
 
-Maximum/Minimum Chunk Size:
+**Maximum/Minimum Chunk Size:**
 
 I recommended a maximum chunk size of 800 because this strikes a good balance between providing enough context for retrieval while staying well within typical LLM token limits.
 The overlap of 100 ensures some context is preserved between chunks, so sentences don’t get cut off between chunks, preserving meaning
