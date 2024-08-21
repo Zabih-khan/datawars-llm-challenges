@@ -39,9 +39,10 @@ Now wait for the result in the terminal
 
 
 
+**Notebook**
 For a detailed breakdown of the code and to understand the whole process, please refer to the notebook:
 
-Notebook.ipynb: Provides a comprehensive overview and step-by-step explanation of the code and processes involved.
+`Notebook.ipynb` Provides a comprehensive overview and step-by-step explanation of the code and processes involved.
 
 
 
