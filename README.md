@@ -31,9 +31,10 @@ This repository contains the code and instructions for the DataWars LLM Candidat
     Once the chunks are created, you can run the agent.py script to start the agent that assists with queries.
 
     Use the following command to run the agent:
-      ```bash
-   python agent.py
-   ```
+
+    ```bash
+    python agent.py
+    ```
 
 Now wait for the result in the terminal
 
