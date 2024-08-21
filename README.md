@@ -38,7 +38,33 @@ This repository contains the code and instructions for the DataWars LLM Candidat
 
 Now wait for the result in the terminal
 
+## Directory Structure:
 
+```
+datawars-llm-challenges/
+│
+├── Chunk evaluation/
+│   └── Evaluation.md
+│
+├── chunks_output/
+│   └── chunks.json
+│
+├── Notebook/
+│   └── Notebook.ipynb
+│
+├── transcripts/
+│   ├── playlists/
+│   └── videos/
+│
+├── .env
+├── .gitignore
+├── agent_design.md
+├── agent.py
+├── chunks.py
+├── README.md
+└── requirements.txt
+
+```
 
 ### ➡ Notebook:
 
