@@ -10,5 +10,6 @@ This repository contains the code and instructions for the DataWars LLM Candidat
 
    ```bash
    pip install -r requirements.txt
-   
+   ```
+
 
