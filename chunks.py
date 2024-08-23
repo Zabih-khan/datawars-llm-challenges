@@ -35,14 +35,13 @@ def chunk_transcript(transcript, max_chunk_size, overlap):
         chunk_size=max_chunk_size,
         chunk_overlap=overlap,
         length_function=len,
-        keep_separator=True,
         separators=['.', ',', '\n', '\n\n'] 
     )
     chunks = text_splitter.split_text(transcript['text'])
     
     return [
-        {"chunk_id": f"{transcript['metadata']['video_id']}_{i}", "title": transcript['metadata']['title'], "text": chunk}
-        for i, chunk in enumerate(chunks)
+        {"title": transcript['metadata']['title'], "text": chunk}
+        for chunk in chunks
     ]
 
 def save_chunks_to_file(combined_chunks, output_file):
@@ -79,7 +78,7 @@ def main():
         if os.path.isfile(transcript_path) and os.path.isfile(metadata_path):
             metadata = load_metadata(metadata_path)
             transcript = load_transcript(transcript_path, metadata)
-            chunked_data = chunk_transcript(transcript, max_chunk_size=800, overlap=100)
+            chunked_data = chunk_transcript(transcript, max_chunk_size=1000, overlap=200)
             combined_chunks.extend(chunked_data)
 
     save_chunks_to_file(combined_chunks, args.output)

@@ -24,7 +24,17 @@ This document outlines the strategy and implementation details for chunking vide
 
 ## Metrics
 
-### Correctness and Relevancy
+# Retrieval Metrics:
+
+- **Context Precision (0.9977)**: Measures how relevant the retrieved context is. Very high precision, meaning mostly relevant information is retrieved.
+- **Context Recall (0.7999)**: Measures how much of the necessary information is retrieved. Good, but could be improved to capture more relevant content.
+
+# Generation Metrics:
+- **Faithfulness (0.9449)**: Measures how factually consistent the answer is with the context. Strong performance.
+- **Answer Relevancy (0.8983)**: Measures how relevant the answer is to the question. Good, but room for fine-tuning.
+- **Answer Correctness (0.7227)**: Measures how accurate the answer is. Needs improvement.
+- **Answer Similarity (0.9715)**: Measures how similar the answer is to a reference answer. Very high similarity.
+
 
 Screenshots demonstrate that when asking the question "How can I group a DataFrame in Pandas?" the system retrieves accurate chunks. At time 14:50, you can compare the results with the actual video transcript.
 
