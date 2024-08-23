@@ -44,18 +44,15 @@ Now wait for the result in the terminal
 datawars-llm-challenges/
 │
 ├── Chunk evaluation/
-│   └── Evaluation.md
+│   |── Evaluation.md
+|   └── Evaluation.ipynb
 │
 ├── chunks_output/
 │   └── chunks.json
 │
-├── Notebook/
-│   └── Notebook.ipynb
-│
 ├── transcripts/
 │   ├── playlists/
 │   └── videos/
-│
 ├── .env
 ├── .gitignore
 ├── agent_design.md
@@ -68,9 +65,9 @@ datawars-llm-challenges/
 
 ### ➡ Notebook:
 
-For a detailed breakdown of the code and to understand the whole process, please refer to the notebook:
+For a detailed breakdown of the Evalution of the Rag and to understand the whole process, please refer to the notebook:
 
-`Notebook.ipynb` Provides a comprehensive overview and step-by-step explanation of the code and processes involved.
+`Evaluation.ipynb` Provides a comprehensive overview and step-by-step explanation of the code and processes involved.
 
 
 ### ➡ Notes:
