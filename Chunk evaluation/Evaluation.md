@@ -14,33 +14,34 @@ This document outlines the strategy and implementation details for chunking vide
 
 ## Why This Strategy Works
 
-**Chunk Size and Overlap**: 800 characters is a typical sweet spot for LLM models to process. It keeps chunks small enough to avoid exceeding token limits but large enough to retain context. The overlap ensures that even if a relevant part of the text spans two chunks, both chunks contain enough information to remain useful for retrieval.
+**Chunk Size and Overlap**: Setting the chunk size to 1000 characters makes it easier for the model to process the information. The overlap of 200 characters ensures that important information is not lost between chunks.
 
 ### Why I Chose Length-Based and Sentence Boundary Chunking
 
-**Simplicity and Efficiency**: Using fixed chunk sizes is an efficient way to manage token costs and ensure each chunk fits within the LLM's token limits. Sentence boundary chunking provides a balance of coherence and ease of implementation.
+**Simplicity and Efficiency**: Using a fixed chunk size is simple and helps control the number of tokens (words and symbols) the model processes. Breaking chunks at sentence boundaries makes the text easier to read and understand.
 
-**Maximum/Minimum Chunk Size**: A maximum chunk size of 800 characters strikes a good balance between providing enough context for retrieval while staying within typical LLM token limits. The overlap of 100 characters preserves context between chunks, preventing sentences from being cut off and preserving meaning.
+**Maximum/Minimum Chunk Size**: A chunk size of 1000 characters gives enough context for the model to understand while staying within limits. The 200-character overlap helps keep the flow of information between chunks.
+
 
 ## Evaluation Metrics Results
 
 ### RAGAS Evaluation Technique
 
-The **RAGAS (Retrieval-Augmented Generation Answer Scoring)** technique is used to evaluate the system's performance. It calculates a **harmonic mean** of individual metric scores, ensuring a balanced assessment of both retrieval and generation quality.
+The **RAGAS (Retrieval-Augmented Generation Answer Scoring)** technique is used to evaluate how well the system performs. It combines different scores (retrieval and generation) into one final score, making sure both parts are balanced.
 
 ### Retrieval Metrics:
 
-- **Context Precision (0.9977)**: Measures how relevant the retrieved context is. Very high precision, meaning mostly relevant information is retrieved.
-- **Context Recall (0.7999)**: Measures how much of the necessary information is retrieved. Good, but could be improved to capture more relevant content.
+- **Context Precision (0.9977)**: This measures how relevant the information retrieved is. The score is very high, meaning the system retrieves the right information almost every time.
+- **Context Recall (0.7999)**: This shows how much of the needed information is retrieved. It's a good score.
 
 ### Generation Metrics:
 
-- **Faithfulness (0.9449)**: Measures how factually consistent the answer is with the context. Strong performance.
-- **Answer Relevancy (0.8983)**: Measures how relevant the answer is to the question. Good, but room for fine-tuning.
-- **Answer Correctness (0.7227)**: Measures how accurate the answer is. Needs improvement.
-- **Answer Similarity (0.9715)**: Measures how similar the answer is to a reference answer. Very high similarity.
+- **Faithfulness (0.9449)**: This measures how accurate the generated answer is compared to the given information. The system does well in providing correct information.
+- **Answer Relevancy (0.8983)**: This checks if the answer matches the question. The score is good.
+- **Answer Similarity (0.9715)**: This checks how similar the answer is to a reference answer. The score is very high, meaning the answers are closely related to the ideal response.
 
-Screenshots demonstrate that when asking the question "How can I group a DataFrame in Pandas?" the system retrieves accurate chunks. At time 14:50, you can compare the results with the actual video transcript.
+Screenshots show how the system answers a question like "How can I group a DataFrame in Pandas?" The system retrieves the correct chunks from the video transcript. You can compare the results with the actual transcript at the 14:50 mark.
+
 
 ![Original Content](./original_content.png)
 ![Chunk Output](./chunk_output.png)
